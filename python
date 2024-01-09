@@ -1,0 +1,174 @@
+### Loading the Dataset from Kaggle
+
+# Load the dataset
+
+import tensorflow as tf
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+
+
+### Displying some examples of the image dataset
+
+# Number of images I want to be displayed
+num_images = 10
+
+# To plot the images
+plt.figure(figsize=(10,10))
+for i in range(num_images):
+  # Reshape the data to 28*28 pixels
+  img = x_train[i].reshape(28,28)
+
+  # To displey the image
+  plt.subplot(1, num_images, i+1)
+  plt.imshow(img, cmap='gray')
+  plt.axis('off')
+
+plt.show()
+
+
+# To reshape and normalize the images
+x_train = x_train.reshape(-1, 28*28) / 255.0
+x_test = x_test.reshape(-1, 28*28) / 255.0
+
+
+from sklearn.decomposition import PCA
+
+# Number of components
+n_components = 100
+
+# To create the PCA instance
+pca = PCA(n_components=n_components)
+
+# To fit the PCA on training data
+pca.fit(x_train)
+
+# To apply the mapping to both training and test set
+x_train_pca = pca.transform(x_train)
+x_test_pca = pca.transform(x_test)
+
+
+# Now I have the x_train_pca and x_test_pca as my dimensionality-reduced dataset
+
+# To visualize the PCA Components
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(10, 10, figsize=(9,9),
+                         subplot_kw={'xticks':[], 'yticks':[]},
+                         gridspec_kw=dict(hspace=0.1, wspace=0.1))
+
+for i, ax in enumerate(axes.flat):
+  ax.imshow(pca.components_[i].reshape(28,28), cmap='gray')
+
+plt.show()
+
+
+# Variance Explained: to check how much variance each principal component explains, to understand the effectiveness of the PCA
+
+import numpy as np
+
+# Variance explained
+plt.figure(figsize=(8,4))
+plt.plot(np.cumsum(pca.explained_variance_ratio_))
+plt.xlabel('Number of Components')
+plt.ylabel('Culmulative Explained Variance')
+plt.show()
+
+
+# Clustering with K-Means
+from sklearn.cluster import KMeans
+
+# I select 10 clusters for MNIST
+kmeans = KMeans(n_clusters=10, n_init=10, random_state=42)
+
+# To fit the model to the PCA-reduced data
+kmeans.fit(x_train_pca)
+
+# To predict the cluster labels for the train dataset
+y_train_pred = kmeans.predict(x_train_pca)
+
+
+# Classification
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# To create the logistic regression model
+logisticRegr = LogisticRegression(max_iter=1000)
+
+# To train the model with the PCA-reduced data
+logisticRegr.fit(x_train_pca, y_train)
+
+# To predict labels for the test set
+y_test_pred = logisticRegr.predict(x_test_pca)
+
+# To calculate the accuracy
+accuracy = accuracy_score(y_test, y_test_pred)
+print(f"Classification accuracy with PCA-reduced data: {accuracy}")
+
+# To reduced the data to two dimensions.
+pca_2d = PCA(n_components=2)
+x_train_pca_2d = pca_2d.fit_transform(x_train)
+
+# To plot the first 2 principals components
+plt.figure(figsize=(8, 6))
+
+# Using scatter plot to visualize the first two components
+scatter = plt.scatter(x_train_pca_2d[:, 0],
+                      x_train_pca_2d[:, 1],
+                      c=y_train, alpha=0.5,
+                      cmap='tab10')
+
+# Adding a legend for each digit
+plt.legend(*scatter.legend_elements(), title="Digits")
+
+# Label the axes
+plt.xlabel('First Principal Component')
+plt.ylabel('Second Principal Component')
+plt.title('PCA of MNIST Dataset')
+
+plt.show()
+
+
+from sklearn.manifold import TSNE
+
+# Using the PCA-reduced data as input to t-SNE
+x_pca_reduced = pca.transform(x_train)
+
+# Creating a t-sne model
+tsne = TSNE(n_components=2, perplexity=30,
+            learning_rate=200,
+            random_state=42)
+
+# Fitting and transforming the data
+x_train_tsne = tsne.fit_transform(x_pca_reduced)
+
+# Plotting the results of t-SNE
+plt.figure(figsize=(10, 8))
+scatter = plt.scatter(x_train_tsne[:, 0], x_train_tsne[:, 1],
+                      c=y_train, alpha=0.6,
+                      cmap='tab10')
+plt.legend(*scatter.legend_elements(), title="Digits")
+plt.title('t-SNE visualization of MNIST data')
+plt.xlabel('t-SNE feature 1')
+plt.ylabel('t-SNE feature 2')
+plt.show()
+
+
+!pip install umap-learn
+
+import umap
+
+# Create a UMAP instance
+umap_model = umap.UMAP(n_neighbors=15, min_dist=0.1, n_components=2, random_state=42)
+
+# Fit and transform the data
+# You can use the raw data, but using PCA-reduced data can speed up the process and may sometimes improve the results.
+x_train_umap = umap_model.fit_transform(x_train_pca)
+
+# Now let's plot the result of UMAP
+plt.figure(figsize=(12, 10))
+scatter = plt.scatter(x_train_umap[:, 0], x_train_umap[:, 1], c=y_train, alpha=0.6, cmap='tab10')
+plt.legend(*scatter.legend_elements(), title="Digits")
+plt.title('UMAP visualization of MNIST data')
+plt.xlabel('UMAP feature 1')
+plt.ylabel('UMAP feature 2')
+plt.show()
+
