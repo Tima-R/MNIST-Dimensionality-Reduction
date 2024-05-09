@@ -60,9 +60,13 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 ![t-SNE](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/b0ce99d2-dd0d-49b5-adbf-c9ddfcf35f05)
 
+*The t-SNE visualization of the MNIST dataset shows distinct clusters of different digit classes, with each cluster represented by a unique color, highlighting the effective separation of similar digits into cohesive groups. This method reveals clear boundaries and grouping that are not as evident in PCA, indicating t-SNE's strength in preserving local data structures and revealing the intrinsic clustering of complex, high-dimensional data.*
+
 **UMAP Visualization:** UMAP is used as an alternative to t-SNE for creating a visually appealing representation of high-dimensional data, offering a different perspective on the structure of the dataset.
 
  ![umap](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/b875801e-056b-4fff-a8f4-610161afbad3)
+
+*The UMAP visualization effectively separates the MNIST digits into distinct clusters, each represented by unique colors, illustrating UMAP's ability to preserve both local and global data structures across different classes. This method shows even clearer separation and more compact clusters compared to PCA and t-SNE, highlighting its utility in accurately representing the intrinsic geometric structure of high-dimensional data.* 
 
 
 **Results:**
