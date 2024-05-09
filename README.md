@@ -2,7 +2,8 @@
 
 This project provides a comprehensive analysis of the MNIST dataset, utilizing various machine learning techniques to explore, visualize, and model handwritten digit data. The MNIST dataset consists of 70,000 images of handwritten digits, commonly used for training image processing systems. This repository encompasses the entire workflow of data handling, from initial loading and preprocessing to complex model application and visualization.
 
-**Key Components**
+**Key Components:**
+
 **Data Loading and Preprocessing:** The dataset is loaded directly from TensorFlow's Keras API, with preprocessing steps including reshaping and normalization of image data to facilitate more efficient machine learning processing.
 **Principal Component Analysis (PCA):** PCA is used to reduce the dimensionality of the dataset while retaining the most significant features. This transformation simplifies the dataset, reducing computational requirements and potentially improving model performance.
 **Visualization of PCA Components:** The major PCA components are visualized to understand the variance and patterns within the data that PCA captures.
