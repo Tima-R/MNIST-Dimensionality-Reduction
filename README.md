@@ -35,7 +35,7 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 ![image](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/c20ef013-2928-4006-867e-89b636760420)
 
-*:The PCA cumulative variance plot shows a steep initial rise, indicating that the first few components capture a significant portion of the variance (about 80% to 85% by the 50th component), suggesting these hold the majority of the information. The curve gradually flattens, with diminishing returns on additional components past 100, making around 60-80 components optimal for capturing up to 90% of the variance while maintaining efficient dimensionality reduction.:*
+*The PCA cumulative variance plot shows a steep initial rise, indicating that the first few components capture a significant portion of the variance (about 80% to 85% by the 50th component), suggesting these hold the majority of the information. The curve gradually flattens, with diminishing returns on additional components past 100, making around 60-80 components optimal for capturing up to 90% of the variance while maintaining efficient dimensionality reduction.*
 
 **Visualization of PCA Components:** The major PCA components are visualized to understand the variance and patterns within the data that PCA captures.
 
@@ -46,6 +46,7 @@ The project was developed and run using Google Colab, ensuring access to high co
   ```
   Classification accuracy with PCA-reduced data: 0.9199
   ```
+*The classification accuracy of 91.99% indicates that the logistic regression model, trained on PCA-reduced data from the MNIST dataset, correctly predicts the handwritten digits with a high level of precision, correctly identifying the digits in 91.99% of the cases in the test set. This performance suggests that even with reduced dimensionality, the essential features for digit recognition are retained effectively.*
 
 **Advanced Visualizations:** The project employs several advanced visualization techniques to explore the multi-dimensional nature of the MNIST data.
 
