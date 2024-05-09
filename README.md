@@ -71,6 +71,4 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 **Results:**
 
-The project highlights the power of dimensionality reduction techniques and their impact on classification performance, with the logistic regression model achieving an accuracy of 91.99% on PCA-reduced data.
-This repository serves as a complete guide for handling image recognition tasks with machine learning, providing scripts for each step of the process, from data preprocessing to detailed visualizations and modeling.
-
+Throughout this project, we've successfully demonstrated various dimensionality reduction and visualization techniques on the MNIST dataset, including PCA, t-SNE, and UMAP. Each method provided unique insights: PCA highlighted the general variance and was useful for initial data reduction; t-SNE excelled in revealing local data structures and forming distinct clusters of the digit classes; UMAP further refined these visualizations by preserving both local and global structures, showcasing the most definitive separation and clustering of the data. The logistic regression model, trained on PCA-reduced data, achieved a notable accuracy of 91.99%, indicating that significant information was maintained despite the dimensionality reduction. This project underscores the effectiveness of these techniques in extracting and visualizing the underlying patterns in complex datasets, making it easier to interpret the data and apply machine learning models efficiently.
