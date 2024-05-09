@@ -14,7 +14,8 @@ This project provides a comprehensive analysis of the MNIST dataset, utilizing v
 **t-SNE Visualization:** t-SNE further reduces dimensionality for visualization, highlighting clusters and patterns that are not immediately obvious with PCA.
 **UMAP Visualization:** UMAP is used as an alternative to t-SNE for creating a visually appealing representation of high-dimensional data, offering a different perspective on the structure of the dataset.
 
-**Results**
+**Results:**
+
 The project highlights the power of dimensionality reduction techniques and their impact on classification performance, with the logistic regression model achieving an accuracy of 91.99% on PCA-reduced data.
 This repository serves as a complete guide for handling image recognition tasks with machine learning, providing scripts for each step of the process, from data preprocessing to detailed visualizations and modeling.
 
