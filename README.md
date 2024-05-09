@@ -2,6 +2,16 @@
 
 This project provides a comprehensive analysis of the MNIST dataset, utilizing various machine learning techniques to explore, visualize, and model handwritten digit data. The MNIST dataset consists of 70,000 images of handwritten digits, commonly used for training image processing systems. This repository encompasses the entire workflow of data handling, from initial loading and preprocessing to complex model application and visualization.
 
+Getting Started
+Prerequisites
+
+Installation
+1. **Clone the repository**:
+    ```
+    git clone https://github.com/Tima-R/MNIST-Dimensionality-Reduction.git
+    ```
+
+
 **Key Components:**
 
 **Data Loading and Preprocessing:** The dataset is loaded directly from TensorFlow's Keras API, with preprocessing steps including reshaping and normalization of image data to facilitate more efficient machine learning processing.
