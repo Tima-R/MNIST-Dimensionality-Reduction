@@ -1,0 +1,20 @@
+
+MNIST-Dataset-Analysis/
+│
+├── src/
+│   ├── load_data.py                 # Step 1: Load the dataset
+│   ├── display_samples.py           # Step 2: Display sample images
+│   ├── preprocess_data.py           # Step 3: Reshape and normalize the data
+│   ├── apply_pca.py                 # Step 4: Apply PCA
+│   ├── visualize_pca_components.py  # Step 5: Visualize PCA components
+│   ├── check_variance.py            # Step 6: Check the variance explained by each principal component
+│   ├── cluster_kmeans.py            # Step 7: Clustering with K-means
+│   ├── classify_logistic.py         # Step 8: Classification with logistic regression
+│   ├── visualize_2d_pca.py          # Step 9: 2D visualization the PCA-reduced data
+│   ├── visualize_tsne.py            # Step 10: Using t-SNE for visualization
+│   ├── visualize_umap.py            # Step 11: Using UMAP for visualization
+│
+├── data/
+├── notebooks/
+├── requirements.txt
+└── README.md
