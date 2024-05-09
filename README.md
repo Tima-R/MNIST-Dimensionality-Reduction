@@ -54,6 +54,8 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 ![first-two-components](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/128e96c3-4a2c-47ae-b896-438455036039)
 
+*The image displays a scatter plot of the MNIST dataset reduced to two principal components using PCA. Each point represents a digit (0-9), color-coded by class, illustrating how PCA projects the high-dimensional data into a two-dimensional space where similar digits cluster together, albeit with some overlap. The plot reveals the inherent data structure and variability, with some digits forming distinct groups while others spread out, suggesting varying degrees of separability between different classes in this reduced space.*
+
 **t-SNE Visualization:** t-SNE further reduces dimensionality for visualization, highlighting clusters and patterns that are not immediately obvious with PCA.
 
 ![t-SNE](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/b0ce99d2-dd0d-49b5-adbf-c9ddfcf35f05)
