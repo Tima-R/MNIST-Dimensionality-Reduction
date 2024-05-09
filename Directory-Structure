@@ -13,8 +13,5 @@ MNIST-Dataset-Analysis/
 │   ├── visualize_2d_pca.py          # Step 9: To visualize the data reduced to 2 principal components to explore data separability
 │   ├── visualize_tsne.py            # Step 10: To use t-SNE to visualize the high-dimensional data in two dimensions
 │   ├── visualize_umap.py            # Step 11: To use UMAP to provide a powerful visualization of the dataset
-│
-├── data/
-├── notebooks/
-├── requirements.txt
+│   ├── results
 └── README.md
