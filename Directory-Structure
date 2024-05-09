@@ -2,17 +2,17 @@
 MNIST-Dataset-Analysis/
 │
 ├── src/
-│   ├── load_data.py                 # Step 1: Load the dataset
-│   ├── display_samples.py           # Step 2: Display sample images
-│   ├── preprocess_data.py           # Step 3: Reshape and normalize the data
-│   ├── apply_pca.py                 # Step 4: Apply PCA
-│   ├── visualize_pca_components.py  # Step 5: Visualize PCA components
-│   ├── check_variance.py            # Step 6: Check the variance explained by each principal component
-│   ├── cluster_kmeans.py            # Step 7: Clustering with K-means
-│   ├── classify_logistic.py         # Step 8: Classification with logistic regression
-│   ├── visualize_2d_pca.py          # Step 9: 2D visualization the PCA-reduced data
-│   ├── visualize_tsne.py            # Step 10: Using t-SNE for visualization
-│   ├── visualize_umap.py            # Step 11: Using UMAP for visualization
+│   ├── load_data.py                 # Step 1: To load the MNIST dataset from TensorFlow's Keras API
+│   ├── display_samples.py           # Step 2: To display a subset of images from the dataset
+│   ├── preprocess_data.py           # Step 3: To eshape and normalize the dataset images for machine learning models
+│   ├── apply_pca.py                 # Step 4: To apply Principal Component Analysis to reduce the dimensionality of the data
+│   ├── visualize_pca_components.py  # Step 5: To visualize the principal components derived from PCA
+│   ├── check_variance.py            # Step 6: To calculate and plot the cumulative explained variance by PCA components
+│   ├── cluster_kmeans.py            # Step 7: To apply K-means clustering to the PCA-reduced data
+│   ├── classify_logistic.py         # Step 8: To classify the digits using logistic regression and to calculate the model accuracy
+│   ├── visualize_2d_pca.py          # Step 9: To visualize the data reduced to 2 principal components to explore data separability
+│   ├── visualize_tsne.py            # Step 10: To use t-SNE to visualize the high-dimensional data in two dimensions
+│   ├── visualize_umap.py            # Step 11: To use UMAP to provide a powerful visualization of the dataset
 │
 ├── data/
 ├── notebooks/
