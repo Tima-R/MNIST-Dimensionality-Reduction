@@ -40,6 +40,10 @@ The project was developed and run using Google Colab, ensuring access to high co
 **t-SNE Visualization:** t-SNE further reduces dimensionality for visualization, highlighting clusters and patterns that are not immediately obvious with PCA.
 
 **UMAP Visualization:** UMAP is used as an alternative to t-SNE for creating a visually appealing representation of high-dimensional data, offering a different perspective on the structure of the dataset.
+ 
+ ```
+ mkdir images
+ ```
 
 **Results:**
 
