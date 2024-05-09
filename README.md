@@ -37,8 +37,6 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 **Visualization of PCA Components:** The major PCA components are visualized to understand the variance and patterns within the data that PCA captures.
 
-![first-two-components](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/534ba997-06e7-42c7-b91d-de791c73f577)
-
 **K-Means Clustering**: To explore underlying patterns in the dataset, k-means clustering is applied, allowing for the examination of how digits are grouped together based on their visual similarity.
 
 **Logistic Regression Classification:** A logistic regression model is trained on the PCA-reduced data, achieving a classification accuracy of 91.99% on the test set. This demonstrates the efficacy of using PCA for dimension reduction before classification.
@@ -50,6 +48,8 @@ The project was developed and run using Google Colab, ensuring access to high co
 **Advanced Visualizations:** The project employs several advanced visualization techniques to explore the multi-dimensional nature of the MNIST data.
 
 **2D PCA Visualization:** Projects the high-dimensional data into two dimensions using PCA, providing insights into the data separability.
+
+![first-two-components](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/128e96c3-4a2c-47ae-b896-438455036039)
 
 **t-SNE Visualization:** t-SNE further reduces dimensionality for visualization, highlighting clusters and patterns that are not immediately obvious with PCA.
 
