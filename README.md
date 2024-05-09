@@ -51,8 +51,6 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 **2D PCA Visualization:** Projects the high-dimensional data into two dimensions using PCA, providing insights into the data separability.
 
-![first-two-components](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/1fa9a299-c5d1-412c-be4e-738a1496e3eb)
-
 **t-SNE Visualization:** t-SNE further reduces dimensionality for visualization, highlighting clusters and patterns that are not immediately obvious with PCA.
 
 ![t-SNE](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/b0ce99d2-dd0d-49b5-adbf-c9ddfcf35f05)
