@@ -25,7 +25,11 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 **Data Loading and Preprocessing:** The dataset is loaded directly from TensorFlow's Keras API, with preprocessing steps including reshaping and normalization of image data to facilitate more efficient machine learning processing.
 
+![train-set](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/1b7033ff-1e4e-4f10-b5b3-aa779257f36f)
+
+
 **Principal Component Analysis (PCA):** PCA is used to reduce the dimensionality of the dataset while retaining the most significant features. This transformation simplifies the dataset, reducing computational requirements and potentially improving model performance.
+
 
 **Visualization of PCA Components:** The major PCA components are visualized to understand the variance and patterns within the data that PCA captures.
 
@@ -41,9 +45,6 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 **UMAP Visualization:** UMAP is used as an alternative to t-SNE for creating a visually appealing representation of high-dimensional data, offering a different perspective on the structure of the dataset.
  
- ```
- mkdir images
- ```
 
 **Results:**
 
