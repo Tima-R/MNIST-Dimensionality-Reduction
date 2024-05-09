@@ -10,7 +10,16 @@ Installation
     ```
     git clone https://github.com/Tima-R/MNIST-Dimensionality-Reduction.git
     ```
+## Environment Setup
+The project was developed and run using Google Colab, ensuring access to high computational power necessary for training deep learning models. Below are the key dependencies required:
 
+- **Python 3.10.12**
+- **Numpy**
+- **Matplotlib**
+- **scikit-learn**
+- **UMAP-learn**
+- **TSNE** 
+- **TensorFlow**
 
 **Key Components:**
 
