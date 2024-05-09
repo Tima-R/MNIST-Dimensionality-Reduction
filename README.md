@@ -1,4 +1,5 @@
-**MNIST Dataset Analysis Overview**
+**MNIST Dataset Analysis Overview:**
+
 This project provides a comprehensive analysis of the MNIST dataset, utilizing various machine learning techniques to explore, visualize, and model handwritten digit data. The MNIST dataset consists of 70,000 images of handwritten digits, commonly used for training image processing systems. This repository encompasses the entire workflow of data handling, from initial loading and preprocessing to complex model application and visualization.
 
 **Key Components**
