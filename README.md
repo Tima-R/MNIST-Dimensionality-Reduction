@@ -35,6 +35,8 @@ The project was developed and run using Google Colab, ensuring access to high co
 
 ![image](https://github.com/Tima-R/MNIST-Dimensionality-Reduction/assets/116596345/c20ef013-2928-4006-867e-89b636760420)
 
+*:The PCA cumulative variance plot shows a steep initial rise, indicating that the first few components capture a significant portion of the variance (about 80% to 85% by the 50th component), suggesting these hold the majority of the information. The curve gradually flattens, with diminishing returns on additional components past 100, making around 60-80 components optimal for capturing up to 90% of the variance while maintaining efficient dimensionality reduction.:*
+
 **Visualization of PCA Components:** The major PCA components are visualized to understand the variance and patterns within the data that PCA captures.
 
 **K-Means Clustering**: To explore underlying patterns in the dataset, k-means clustering is applied, allowing for the examination of how digits are grouped together based on their visual similarity.
